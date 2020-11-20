@@ -1,7 +1,7 @@
 name: translate_openapi
-description: An empty Aqueduct application.
+description: An translate open api.
 version: 0.0.1
-author: stable|kernel <jobs@stablekernel.com>
+author: LiJianying <lijy91@foxmail.com>
 
 environment:
   sdk: ">=2.6.0 <3.0.0"
