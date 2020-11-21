@@ -9,3 +9,6 @@ export 'dart:io';
 export 'package:aqueduct/aqueduct.dart';
 
 export 'channel.dart';
+export 'controllers/controllers.dart';
+export 'services/services.dart';
+export 'utils/utils.dart';

@@ -1,12 +1,12 @@
-import 'controllers/engine_controller.dart';
-import 'controllers/lookup_controller.dart';
 import 'translate_openapi.dart';
 
 /// This type initializes an application.
 ///
 /// Override methods in this class to set up routes and initialize services like
 /// database connections. See http://aqueduct.io/docs/http/channel/.
-class TranslateOpenapiChannel extends ApplicationChannel {
+class TranslateOpenAPIChannel extends ApplicationChannel {
+  TranslateOpenAPIConfig _config;
+
   /// Initialize services in this method.
   ///
   /// Implement this method to initialize services, read values from [options]
@@ -17,6 +17,13 @@ class TranslateOpenapiChannel extends ApplicationChannel {
   Future prepare() async {
     logger.onRecord.listen(
         (rec) => print("$rec ${rec.error ?? ""} ${rec.stackTrace ?? ""}"));
+
+    _config ??= TranslateOpenAPIConfig(options.configurationFilePath);
+
+    _config.translateEngines.forEach((e) {
+      print(e['name']);
+      print(e['authKey']);
+    });
   }
 
   /// Construct the request channel.
@@ -32,6 +39,7 @@ class TranslateOpenapiChannel extends ApplicationChannel {
     /* gets engines */
     router.route("/engines/[:id]").link(() => EngineController());
     router.route("/lookup").link(() => LookUpController());
+    router.route("/translate").link(() => TranslateController());
 
     router.route("/*").link(() => ReroutingFileController("web"));
 
@@ -62,4 +70,11 @@ class ReroutingFileController extends FileController {
 
     return potentialResponse;
   }
+}
+
+class TranslateOpenAPIConfig extends Configuration {
+  TranslateOpenAPIConfig(String fileName) : super.fromFile(File(fileName));
+
+  DatabaseConfiguration database;
+  List<Map<String, String>> translateEngines;
 }

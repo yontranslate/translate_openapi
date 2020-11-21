@@ -1,7 +1,7 @@
 import 'package:translate_openapi/translate_openapi.dart';
 
 Future main() async {
-  final app = Application<TranslateOpenapiChannel>()
+  final app = Application<TranslateOpenAPIChannel>()
       ..options.configurationFilePath = "config.yaml"
       ..options.port = 8888;
 
