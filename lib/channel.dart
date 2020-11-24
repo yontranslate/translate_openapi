@@ -19,11 +19,7 @@ class TranslateOpenAPIChannel extends ApplicationChannel {
         (rec) => print("$rec ${rec.error ?? ""} ${rec.stackTrace ?? ""}"));
 
     _config ??= TranslateOpenAPIConfig(options.configurationFilePath);
-
-    _config.translateEngines.forEach((e) {
-      print(e['name']);
-      print(e['authKey']);
-    });
+    initTranslateClient(_config);
   }
 
   /// Construct the request channel.

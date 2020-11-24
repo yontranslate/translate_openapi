@@ -386,6 +386,13 @@ packages:
       relative: true
     source: path
     version: "0.0.1"
+  translate_engine_caiyun:
+    dependency: "direct main"
+    description:
+      path: "../dart_pkgs/packages/translate_engine_caiyun"
+      relative: true
+    source: path
+    version: "0.0.1"
   translate_engine_cloudoptai:
     dependency: "direct main"
     description:
@@ -397,6 +404,13 @@ packages:
     dependency: "direct main"
     description:
       path: "../dart_pkgs/packages/translate_engine_deepl"
+      relative: true
+    source: path
+    version: "0.0.1"
+  translate_engine_youdao:
+    dependency: "direct main"
+    description:
+      path: "../dart_pkgs/packages/translate_engine_youdao"
       relative: true
     source: path
     version: "0.0.1"

@@ -11,10 +11,14 @@ dependencies:
 
   translate_client:
     path: ../dart_pkgs/packages/translate_client
+  translate_engine_caiyun:
+    path: ../dart_pkgs/packages/translate_engine_caiyun
   translate_engine_cloudoptai:
     path: ../dart_pkgs/packages/translate_engine_cloudoptai
   translate_engine_deepl:
     path: ../dart_pkgs/packages/translate_engine_deepl
+  translate_engine_youdao:
+    path: ../dart_pkgs/packages/translate_engine_youdao
 
 dev_dependencies:
   test: ^1.0.0

@@ -5,6 +5,12 @@ database:
   password: dart
   databaseName: dart_test
 translateEngines:
+  - name: caiyun
+    token:
+    requestId: translate_openapi
   - name: cloudoptai
   - name: deepl
-    authKey: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    authKey:
+  - name: youdao
+    appKey:
+    appSecret:
