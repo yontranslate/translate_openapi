@@ -407,6 +407,20 @@ packages:
       relative: true
     source: path
     version: "0.0.1"
+  translate_engine_iciba:
+    dependency: "direct main"
+    description:
+      path: "../dart_pkgs/packages/translate_engine_iciba"
+      relative: true
+    source: path
+    version: "0.0.1"
+  translate_engine_sogou:
+    dependency: "direct main"
+    description:
+      path: "../dart_pkgs/packages/translate_engine_sogou"
+      relative: true
+    source: path
+    version: "0.0.1"
   translate_engine_youdao:
     dependency: "direct main"
     description:

@@ -17,6 +17,10 @@ dependencies:
     path: ../dart_pkgs/packages/translate_engine_cloudoptai
   translate_engine_deepl:
     path: ../dart_pkgs/packages/translate_engine_deepl
+  translate_engine_iciba:
+    path: ../dart_pkgs/packages/translate_engine_iciba
+  translate_engine_sogou:
+    path: ../dart_pkgs/packages/translate_engine_sogou
   translate_engine_youdao:
     path: ../dart_pkgs/packages/translate_engine_youdao
 

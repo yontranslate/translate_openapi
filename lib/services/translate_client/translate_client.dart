@@ -2,6 +2,8 @@ import 'package:translate_client/translate_client.dart';
 import 'package:translate_engine_caiyun/translate_engine_caiyun.dart';
 import 'package:translate_engine_cloudoptai/translate_engine_cloudoptai.dart';
 import 'package:translate_engine_deepl/translate_engine_deepl.dart';
+import 'package:translate_engine_iciba/translate_engine_iciba.dart';
+import 'package:translate_engine_sogou/translate_engine_sogou.dart';
 import 'package:translate_engine_youdao/translate_engine_youdao.dart';
 
 import '../../translate_openapi.dart';
@@ -15,7 +17,10 @@ void initTranslateClient(TranslateOpenAPIConfig config) {
     TranslateEngine _caiyunTranslateEngine;
     TranslateEngine _cloudoptAITranslateEngine;
     TranslateEngine _deepLTranslateEngine;
+    TranslateEngine _icibaTranslateEngine;
+    TranslateEngine _sogouTranslateEngine;
     TranslateEngine _youdaoTranslateEngine;
+
     for (var e in config.translateEngines) {
       switch (e['name']) {
         case 'caiyun':
@@ -32,6 +37,17 @@ void initTranslateClient(TranslateOpenAPIConfig config) {
             authKey: e['authKey'],
           );
           break;
+        case 'iciba':
+          _icibaTranslateEngine = IcibaTranslateEngine(
+            key: e['key'],
+          );
+          break;
+        case 'sogou':
+          _sogouTranslateEngine = SogouTranslateEngine(
+            pid: e['pid'],
+            key: e['key'],
+          );
+          break;
         case 'youdao':
           _youdaoTranslateEngine = YoudaoTranslateEngine(
             appKey: e['appKey'],
@@ -45,7 +61,9 @@ void initTranslateClient(TranslateOpenAPIConfig config) {
       _caiyunTranslateEngine,
       _cloudoptAITranslateEngine,
       _deepLTranslateEngine,
+      _icibaTranslateEngine,
+      _sogouTranslateEngine,
       _youdaoTranslateEngine,
-    ]);
+    ].where((e) => e != null).toList());
   }
 }

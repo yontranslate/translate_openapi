@@ -8,13 +8,14 @@ class LookUpController extends ResourceController {
     try {
       final LookUpRequest lookUpRequest = LookUpRequest(word: word);
       final LookUpResponse lookUpResponse =
-          await translateClient.firstEngine.lookUp(lookUpRequest);
+          await translateClient.use('sogou').lookUp(lookUpRequest);
 
       final data = lookUpResponse.toJson();
       return Response.ok(data.removeNulls());
     } on NotFoundException catch (e) {
       return Response.notFound(body: e.toJson());
     } catch (e) {
+      print(e);
       return Response.serverError();
     }
   }
