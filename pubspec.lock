@@ -386,6 +386,13 @@ packages:
       relative: true
     source: path
     version: "0.0.1"
+  translate_engine_baidu:
+    dependency: "direct main"
+    description:
+      path: "../dart_pkgs/packages/translate_engine_baidu"
+      relative: true
+    source: path
+    version: "0.0.1"
   translate_engine_caiyun:
     dependency: "direct main"
     description:
@@ -418,6 +425,13 @@ packages:
     dependency: "direct main"
     description:
       path: "../dart_pkgs/packages/translate_engine_sogou"
+      relative: true
+    source: path
+    version: "0.0.1"
+  translate_engine_tencent:
+    dependency: "direct main"
+    description:
+      path: "../dart_pkgs/packages/translate_engine_tencent"
       relative: true
     source: path
     version: "0.0.1"

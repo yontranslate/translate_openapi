@@ -8,7 +8,7 @@ class LookUpController extends ResourceController {
     try {
       final LookUpRequest lookUpRequest = LookUpRequest(word: word);
       final LookUpResponse lookUpResponse =
-          await translateClient.use('sogou').lookUp(lookUpRequest);
+          await translateClient.use('baidu').lookUp(lookUpRequest);
 
       final data = lookUpResponse.toJson();
       return Response.ok(data.removeNulls());

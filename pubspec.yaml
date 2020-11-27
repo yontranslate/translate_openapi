@@ -11,6 +11,8 @@ dependencies:
 
   translate_client:
     path: ../dart_pkgs/packages/translate_client
+  translate_engine_baidu:
+    path: ../dart_pkgs/packages/translate_engine_baidu
   translate_engine_caiyun:
     path: ../dart_pkgs/packages/translate_engine_caiyun
   translate_engine_cloudoptai:
@@ -21,6 +23,8 @@ dependencies:
     path: ../dart_pkgs/packages/translate_engine_iciba
   translate_engine_sogou:
     path: ../dart_pkgs/packages/translate_engine_sogou
+  translate_engine_tencent:
+    path: ../dart_pkgs/packages/translate_engine_tencent
   translate_engine_youdao:
     path: ../dart_pkgs/packages/translate_engine_youdao
 

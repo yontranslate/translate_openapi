@@ -8,7 +8,7 @@ class TranslateController extends ResourceController {
     try {
       final TranslateRequest translateRequest = TranslateRequest(text: text);
       final TranslateResponse translateResponse =
-          await translateClient.firstEngine.translate(translateRequest);
+          await translateClient.use('tencent').translate(translateRequest);
 
       final data = translateResponse.toJson();
       return Response.ok(data.removeNulls());
