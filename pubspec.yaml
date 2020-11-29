@@ -19,6 +19,8 @@ dependencies:
     path: ../dart_pkgs/packages/translate_engine_cloudoptai
   translate_engine_deepl:
     path: ../dart_pkgs/packages/translate_engine_deepl
+  translate_engine_ibmwatson:
+    path: ../dart_pkgs/packages/translate_engine_ibmwatson
   translate_engine_iciba:
     path: ../dart_pkgs/packages/translate_engine_iciba
   translate_engine_sogou:

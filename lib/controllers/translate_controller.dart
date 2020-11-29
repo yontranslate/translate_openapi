@@ -8,13 +8,14 @@ class TranslateController extends ResourceController {
     try {
       final TranslateRequest translateRequest = TranslateRequest(text: text);
       final TranslateResponse translateResponse =
-          await translateClient.use('tencent').translate(translateRequest);
+          await translateClient.use('ibmwatson').translate(translateRequest);
 
       final data = translateResponse.toJson();
       return Response.ok(data.removeNulls());
     } on NotFoundException catch (e) {
       return Response.notFound(body: e.toJson());
     } catch (e) {
+      print(e);
       return Response.serverError();
     }
   }

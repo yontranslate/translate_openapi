@@ -414,6 +414,13 @@ packages:
       relative: true
     source: path
     version: "0.0.1"
+  translate_engine_ibmwatson:
+    dependency: "direct main"
+    description:
+      path: "../dart_pkgs/packages/translate_engine_ibmwatson"
+      relative: true
+    source: path
+    version: "0.0.1"
   translate_engine_iciba:
     dependency: "direct main"
     description:

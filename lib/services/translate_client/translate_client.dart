@@ -3,6 +3,7 @@ import 'package:translate_engine_baidu/translate_engine_baidu.dart';
 import 'package:translate_engine_caiyun/translate_engine_caiyun.dart';
 import 'package:translate_engine_cloudoptai/translate_engine_cloudoptai.dart';
 import 'package:translate_engine_deepl/translate_engine_deepl.dart';
+import 'package:translate_engine_ibmwatson/translate_engine_ibmwatson.dart';
 import 'package:translate_engine_iciba/translate_engine_iciba.dart';
 import 'package:translate_engine_sogou/translate_engine_sogou.dart';
 import 'package:translate_engine_tencent/translate_engine_tencent.dart';
@@ -16,6 +17,7 @@ const _kEngineBaidu = 'baidu';
 const _kEngineCaiyun = 'caiyun';
 const _kEngineCloudoptAI = 'cloudoptai';
 const _kEngineDeepL = 'deepl';
+const _kEngineIBMWatson = 'ibmwatson';
 const _kEngineIciba = 'iciba';
 const _kEngineSogou = 'sogou';
 const _kEngineTencent = 'tencent';
@@ -42,6 +44,7 @@ void initTranslateClient(TranslateOpenAPIConfig config) {
     TranslateEngine _caiyunTranslateEngine;
     TranslateEngine _cloudoptAITranslateEngine;
     TranslateEngine _deepLTranslateEngine;
+    TranslateEngine _ibmwatsonTranslateEngine;
     TranslateEngine _icibaTranslateEngine;
     TranslateEngine _sogouTranslateEngine;
     TranslateEngine _tencentTranslateEngine;
@@ -58,6 +61,9 @@ void initTranslateClient(TranslateOpenAPIConfig config) {
     });
     _getEngineConfig(config, _kEngineDeepL, (ec) {
       _deepLTranslateEngine = DeepLTranslateEngine.newInstance(ec);
+    });
+    _getEngineConfig(config, _kEngineIBMWatson, (ec) {
+      _ibmwatsonTranslateEngine = IBMWatsonTranslateEngine.newInstance(ec);
     });
     _getEngineConfig(config, _kEngineIciba, (ec) {
       _icibaTranslateEngine = IcibaTranslateEngine.newInstance(ec);
@@ -77,6 +83,7 @@ void initTranslateClient(TranslateOpenAPIConfig config) {
       _caiyunTranslateEngine,
       _cloudoptAITranslateEngine,
       _deepLTranslateEngine,
+      _ibmwatsonTranslateEngine,
       _icibaTranslateEngine,
       _sogouTranslateEngine,
       _tencentTranslateEngine,
