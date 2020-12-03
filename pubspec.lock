@@ -382,70 +382,70 @@ packages:
   translate_client:
     dependency: "direct main"
     description:
-      path: "../dart_pkgs/packages/translate_client"
+      path: "dart_pkgs/packages/translate_client"
       relative: true
     source: path
     version: "0.0.1"
   translate_engine_baidu:
     dependency: "direct main"
     description:
-      path: "../dart_pkgs/packages/translate_engine_baidu"
+      path: "dart_pkgs/packages/translate_engine_baidu"
       relative: true
     source: path
     version: "0.0.1"
   translate_engine_caiyun:
     dependency: "direct main"
     description:
-      path: "../dart_pkgs/packages/translate_engine_caiyun"
+      path: "dart_pkgs/packages/translate_engine_caiyun"
       relative: true
     source: path
     version: "0.0.1"
   translate_engine_cloudoptai:
     dependency: "direct main"
     description:
-      path: "../dart_pkgs/packages/translate_engine_cloudoptai"
+      path: "dart_pkgs/packages/translate_engine_cloudoptai"
       relative: true
     source: path
     version: "0.0.1"
   translate_engine_deepl:
     dependency: "direct main"
     description:
-      path: "../dart_pkgs/packages/translate_engine_deepl"
+      path: "dart_pkgs/packages/translate_engine_deepl"
       relative: true
     source: path
     version: "0.0.1"
   translate_engine_ibmwatson:
     dependency: "direct main"
     description:
-      path: "../dart_pkgs/packages/translate_engine_ibmwatson"
+      path: "dart_pkgs/packages/translate_engine_ibmwatson"
       relative: true
     source: path
     version: "0.0.1"
   translate_engine_iciba:
     dependency: "direct main"
     description:
-      path: "../dart_pkgs/packages/translate_engine_iciba"
+      path: "dart_pkgs/packages/translate_engine_iciba"
       relative: true
     source: path
     version: "0.0.1"
   translate_engine_sogou:
     dependency: "direct main"
     description:
-      path: "../dart_pkgs/packages/translate_engine_sogou"
+      path: "dart_pkgs/packages/translate_engine_sogou"
       relative: true
     source: path
     version: "0.0.1"
   translate_engine_tencent:
     dependency: "direct main"
     description:
-      path: "../dart_pkgs/packages/translate_engine_tencent"
+      path: "dart_pkgs/packages/translate_engine_tencent"
       relative: true
     source: path
     version: "0.0.1"
   translate_engine_youdao:
     dependency: "direct main"
     description:
-      path: "../dart_pkgs/packages/translate_engine_youdao"
+      path: "dart_pkgs/packages/translate_engine_youdao"
       relative: true
     source: path
     version: "0.0.1"

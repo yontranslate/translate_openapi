@@ -1,0 +1,3 @@
+[submodule "dart_pkgs"]
+	path = dart_pkgs
+	url = https://github.com/yontranslate/dart_pkgs.git
