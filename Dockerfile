@@ -1,7 +1,5 @@
 FROM google/dart
 
-RUN apt-get update && apt-get install -y git
-
 WORKDIR /app
 ADD pubspec.* /app/
 ADD dart_pkgs/ /app/dart_pkgs
