@@ -3,7 +3,7 @@ FROM google/dart
 WORKDIR /app
 ADD pubspec.* /app/
 ADD dart_pkgs/ /app/dart_pkgs
-RUN pub get --no-precompile
+RUN export PUB_HOSTED_URL=https://pub.flutter-io.cn && pub get --no-precompile
 ADD . /app/
 RUN pub get --offline --no-precompile
 
