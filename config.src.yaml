@@ -4,13 +4,53 @@ database:
   username: dart
   password: dart
   databaseName: dart_test
-translateEngines:
-  - name: caiyun
-    token:
-    requestId: translate_openapi
-  - name: cloudoptai
-  - name: deepl
-    authKey:
-  - name: youdao
-    appKey:
-    appSecret:
+translationEngines:
+- type: baidu
+    name: Baidu
+    identifier: 
+    option:
+      appId: 
+      appKey: 
+  - type: caiyun
+    name: Caiyun
+    identifier: 
+    option:
+      token: 
+      requestId: 
+  - type: cloudoptai
+    name: CloudoptAI
+    identifier: 
+  - type: deepl
+    name: DeepL
+    identifier: 
+    option:
+      authKey: 
+  - type: ibmwatson
+    name: IBMWatson
+    identifier: 
+    option:
+      apiKey: 
+      apiUrl: 
+  - type: iciba
+    name: Iciba
+    identifier: 
+    option:
+      key: 
+  - type: sogou
+    name: Sogou
+    identifier: 
+    option:
+      pid: 
+      key: 
+  - type: tencent
+    name: Tencent
+    identifier: 
+    option:
+      secretId: 
+      secretKey: 
+  - type: youdao
+    name: Youdao
+    identifier: 
+    option:
+      appKey: 
+      appSecret: 
