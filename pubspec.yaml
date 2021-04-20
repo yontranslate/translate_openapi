@@ -4,32 +4,56 @@ version: 0.0.1
 author: LiJianying <lijy91@foxmail.com>
 
 environment:
-  sdk: ">=2.6.0 <3.0.0"
+  sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
-  aqueduct: 3.3.0+1
+  jaguar: any
+  jaguar_reflect: any
+  yaml: ^3.1.0
 
   translate_client:
     path: ./dart_pkgs/packages/translate_client
-  translate_engine_baidu:
-    path: ./dart_pkgs/packages/translate_engine_baidu
-  translate_engine_caiyun:
-    path: ./dart_pkgs/packages/translate_engine_caiyun
-  translate_engine_cloudoptai:
-    path: ./dart_pkgs/packages/translate_engine_cloudoptai
-  translate_engine_deepl:
-    path: ./dart_pkgs/packages/translate_engine_deepl
-  translate_engine_ibmwatson:
-    path: ./dart_pkgs/packages/translate_engine_ibmwatson
-  translate_engine_iciba:
-    path: ./dart_pkgs/packages/translate_engine_iciba
-  translate_engine_sogou:
-    path: ./dart_pkgs/packages/translate_engine_sogou
-  translate_engine_tencent:
-    path: ./dart_pkgs/packages/translate_engine_tencent
-  translate_engine_youdao:
-    path: ./dart_pkgs/packages/translate_engine_youdao
+  translation_engine_baidu:
+    path: ./dart_pkgs/packages/translation_engine_baidu
+  translation_engine_caiyun:
+    path: ./dart_pkgs/packages/translation_engine_caiyun
+  translation_engine_cloudoptai:
+    path: ./dart_pkgs/packages/translation_engine_cloudoptai
+  translation_engine_deepl:
+    path: ./dart_pkgs/packages/translation_engine_deepl
+  translation_engine_ibmwatson:
+    path: ./dart_pkgs/packages/translation_engine_ibmwatson
+  translation_engine_iciba:
+    path: ./dart_pkgs/packages/translation_engine_iciba
+  translation_engine_sogou:
+    path: ./dart_pkgs/packages/translation_engine_sogou
+  translation_engine_tencent:
+    path: ./dart_pkgs/packages/translation_engine_tencent
+  translation_engine_youdao:
+    path: ./dart_pkgs/packages/translation_engine_youdao
 
 dev_dependencies:
-  test: ^1.0.0
-  aqueduct_test: ^1.0.0
+  build_runner:
+  jaguar_generator:
+
+dependency_overrides:
+  translate_client:
+    path: ../dart_pkgs/packages/translate_client
+  translation_engine_baidu:
+    path: ../dart_pkgs/packages/translation_engine_baidu
+  translation_engine_caiyun:
+    path: ../dart_pkgs/packages/translation_engine_caiyun
+  translation_engine_cloudoptai:
+    path: ../dart_pkgs/packages/translation_engine_cloudoptai
+  translation_engine_deepl:
+    path: ../dart_pkgs/packages/translation_engine_deepl
+  translation_engine_ibmwatson:
+    path: ../dart_pkgs/packages/translation_engine_ibmwatson
+  translation_engine_iciba:
+    path: ../dart_pkgs/packages/translation_engine_iciba
+  translation_engine_sogou:
+    path: ../dart_pkgs/packages/translation_engine_sogou
+  translation_engine_tencent:
+    path: ../dart_pkgs/packages/translation_engine_tencent
+  translation_engine_youdao:
+    path: ../dart_pkgs/packages/translation_engine_youdao

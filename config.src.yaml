@@ -1,56 +1,50 @@
-database:
-  host: localhost
-  port: 5432
-  username: dart
-  password: dart
-  databaseName: dart_test
 translationEngines:
-- type: baidu
+  - type: baidu
     name: Baidu
-    identifier: 
+    identifier:
     option:
-      appId: 
-      appKey: 
+      appId:
+      appKey:
   - type: caiyun
     name: Caiyun
-    identifier: 
+    identifier:
     option:
-      token: 
-      requestId: 
+      token:
+      requestId:
   - type: cloudoptai
     name: CloudoptAI
-    identifier: 
+    identifier:
   - type: deepl
     name: DeepL
-    identifier: 
+    identifier:
     option:
-      authKey: 
+      authKey:
   - type: ibmwatson
     name: IBMWatson
-    identifier: 
+    identifier:
     option:
-      apiKey: 
-      apiUrl: 
+      apiKey:
+      apiUrl:
   - type: iciba
     name: Iciba
-    identifier: 
+    identifier:
     option:
-      key: 
+      key:
   - type: sogou
     name: Sogou
-    identifier: 
+    identifier:
     option:
-      pid: 
-      key: 
+      pid:
+      key:
   - type: tencent
     name: Tencent
-    identifier: 
+    identifier:
     option:
-      secretId: 
-      secretKey: 
+      secretId:
+      secretKey:
   - type: youdao
     name: Youdao
-    identifier: 
+    identifier:
     option:
-      appKey: 
-      appSecret: 
+      appKey:
+      appSecret:
