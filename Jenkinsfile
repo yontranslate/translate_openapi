@@ -94,7 +94,7 @@ pipeline {
             sshCommand(
               remote: remoteConfig, 
               command: """docker run \
-                -p 8888:80 \
+                -p 8080:80 \
                 -v /root/projects/${DOCKER_IMAGE_NAME}/config.yaml:/app/config.yaml:ro \
                 -e VIRTUAL_HOST=translate_openapi-dev.thecode.me \
                 --name ${imageAlias} -d ${imageName} \
