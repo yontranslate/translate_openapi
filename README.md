@@ -1,5 +1,20 @@
 # translate_openapi
 
+## Run with docker
+
+Build docker image
+
+```sh
+docker build -t yontranslate/translate_openapi:latest .
+```
+
+Run
+
+```sh
+docker run -d -it -p 3000:8080 yontranslate/translate_openapi:latest
+```
+
+Visit `http://localhost:3000`
 
 ## License
 
