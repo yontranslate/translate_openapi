@@ -9,7 +9,7 @@ environment:
 dependencies:
   jaguar: any
   jaguar_reflect: any
-  yaml: ^3.1.0
+  yaml: ^2.2.1
 
   translate_client:
     path: ./dart_pkgs/packages/translate_client
@@ -36,24 +36,24 @@ dev_dependencies:
   build_runner:
   jaguar_generator:
 
-dependency_overrides:
-  translate_client:
-    path: ../dart_pkgs/packages/translate_client
-  translation_engine_baidu:
-    path: ../dart_pkgs/packages/translation_engine_baidu
-  translation_engine_caiyun:
-    path: ../dart_pkgs/packages/translation_engine_caiyun
-  translation_engine_cloudoptai:
-    path: ../dart_pkgs/packages/translation_engine_cloudoptai
-  translation_engine_deepl:
-    path: ../dart_pkgs/packages/translation_engine_deepl
-  translation_engine_ibmwatson:
-    path: ../dart_pkgs/packages/translation_engine_ibmwatson
-  translation_engine_iciba:
-    path: ../dart_pkgs/packages/translation_engine_iciba
-  translation_engine_sogou:
-    path: ../dart_pkgs/packages/translation_engine_sogou
-  translation_engine_tencent:
-    path: ../dart_pkgs/packages/translation_engine_tencent
-  translation_engine_youdao:
-    path: ../dart_pkgs/packages/translation_engine_youdao
+# dependency_overrides:
+#   translate_client:
+#     path: ../dart_pkgs/packages/translate_client
+#   translation_engine_baidu:
+#     path: ../dart_pkgs/packages/translation_engine_baidu
+#   translation_engine_caiyun:
+#     path: ../dart_pkgs/packages/translation_engine_caiyun
+#   translation_engine_cloudoptai:
+#     path: ../dart_pkgs/packages/translation_engine_cloudoptai
+#   translation_engine_deepl:
+#     path: ../dart_pkgs/packages/translation_engine_deepl
+#   translation_engine_ibmwatson:
+#     path: ../dart_pkgs/packages/translation_engine_ibmwatson
+#   translation_engine_iciba:
+#     path: ../dart_pkgs/packages/translation_engine_iciba
+#   translation_engine_sogou:
+#     path: ../dart_pkgs/packages/translation_engine_sogou
+#   translation_engine_tencent:
+#     path: ../dart_pkgs/packages/translation_engine_tencent
+#   translation_engine_youdao:
+#     path: ../dart_pkgs/packages/translation_engine_youdao

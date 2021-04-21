@@ -1,4 +1,4 @@
-FROM google/dart
+FROM google/dart:2.10.5
 
 WORKDIR /app
 ENV PUB_HOSTED_URL=https://pub.flutter-io.cn
