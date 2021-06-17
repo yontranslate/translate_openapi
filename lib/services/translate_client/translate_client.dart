@@ -19,73 +19,33 @@ void initTranslateClient() {
     for (var engineConfig in sharedConfig.translationEngines) {
       TranslationEngine translationEngine;
 
-      String identifier = engineConfig.identifier;
-      String name = engineConfig.name;
-      Map<String, dynamic> option = engineConfig.option;
-
       switch (engineConfig.type) {
         case kEngineTypeBaidu:
-          translationEngine = BaiduTranslationEngine(
-            identifier: identifier,
-            name: name,
-            option: option,
-          );
+          translationEngine = BaiduTranslationEngine(engineConfig);
           break;
         case kEngineTypeCaiyun:
-          translationEngine = CaiyunTranslationEngine(
-            identifier: identifier,
-            name: name,
-            option: option,
-          );
+          translationEngine = CaiyunTranslationEngine(engineConfig);
           break;
         case kEngineTypeCloudoptAI:
-          translationEngine = CloudoptAITranslationEngine(
-            identifier: identifier,
-            name: name,
-            option: option,
-          );
+          translationEngine = CloudoptAITranslationEngine(engineConfig);
           break;
         case kEngineTypeDeepL:
-          translationEngine = DeepLTranslationEngine(
-            identifier: identifier,
-            name: name,
-            option: option,
-          );
+          translationEngine = DeepLTranslationEngine(engineConfig);
           break;
         case kEngineTypeIBMWatson:
-          translationEngine = IBMWatsonTranslationEngine(
-            identifier: identifier,
-            name: name,
-            option: option,
-          );
+          translationEngine = IBMWatsonTranslationEngine(engineConfig);
           break;
         case kEngineTypeIciba:
-          translationEngine = IcibaTranslationEngine(
-            identifier: identifier,
-            name: name,
-            option: option,
-          );
+          translationEngine = IcibaTranslationEngine(engineConfig);
           break;
         case kEngineTypeSogou:
-          translationEngine = SogouTranslationEngine(
-            identifier: identifier,
-            name: name,
-            option: option,
-          );
+          translationEngine = SogouTranslationEngine(engineConfig);
           break;
         case kEngineTypeTencent:
-          translationEngine = TencentTranslationEngine(
-            identifier: identifier,
-            name: name,
-            option: option,
-          );
+          translationEngine = TencentTranslationEngine(engineConfig);
           break;
         case kEngineTypeYoudao:
-          translationEngine = YoudaoTranslationEngine(
-            identifier: identifier,
-            name: name,
-            option: option,
-          );
+          translationEngine = YoudaoTranslationEngine(engineConfig);
           break;
       }
       if (translationEngine != null) {
@@ -93,6 +53,8 @@ void initTranslateClient() {
       }
     }
 
-    translateClient = TranslateClient(translationEngines);
+    translateClient = TranslateClient(
+      DefaultTranslateClientAdapter(translationEngines),
+    );
   }
 }

@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:translate_client/translate_client.dart';
 import 'package:yaml/yaml.dart';
 
 Future<void> initConfig(String type) async {
@@ -31,31 +32,4 @@ class Config {
 
   String env;
   List<TranslationEngineConfig> translationEngines;
-}
-
-class TranslationEngineConfig {
-  final String type;
-  final String identifier;
-  final String name;
-  final Map option;
-
-  TranslationEngineConfig({
-    this.type,
-    this.identifier,
-    this.name,
-    this.option,
-  });
-
-  factory TranslationEngineConfig.fromJson(Map<String, dynamic> json) {
-    if (json == null) return null;
-
-    return TranslationEngineConfig(
-      type: json['type'],
-      identifier: json['identifier'],
-      name: json['name'],
-      option: json['option'] != null
-          ? Map<String, dynamic>.from(json['option'])
-          : null,
-    );
-  }
 }

@@ -7,17 +7,17 @@ import '../includes.dart';
 class EngineController extends Controller {
   @GetJson()
   Future<List<Map<String, dynamic>>> getEngines(Context ctx) async {
-    final data = translateClient.engines.map((e) => e.toJson()).toList();
+    DefaultTranslateClientAdapter translateClientAdapter =
+        translateClient.adapter;
+
+    final data = translateClientAdapter.engines.map((e) => e.toJson()).toList();
     return data.removeNulls();
   }
 
   @GetJson(path: '/:identifier')
   Future<Map<String, dynamic>> getEngine(Context ctx) async {
     String identifier = ctx.pathParams.get('identifier');
-    final TranslationEngine engine = translateClient.engines.firstWhere(
-      (e) => e.identifier == identifier,
-      orElse: () => null,
-    );
+    final TranslationEngine engine = translateClient.use(identifier);
 
     final data = engine.toJson();
     return data.removeNulls();
