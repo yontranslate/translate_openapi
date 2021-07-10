@@ -5,13 +5,13 @@
 Build docker image
 
 ```sh
-docker build -t yontranslate/translate_openapi:latest .
+docker build -t biyidev/translate_openapi:latest .
 ```
 
 Run
 
 ```sh
-docker run -d -it -p 3000:8080 yontranslate/translate_openapi:latest
+docker run -d -it -p 3000:8080 biyidev/translate_openapi:latest
 ```
 
 Visit `http://localhost:3000`
